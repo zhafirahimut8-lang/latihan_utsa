@@ -8,8 +8,8 @@ if(isset($_POST['daftar'])) {
     $password = $_POST['password'];
 
     // query simpan data
-    $sql = "INSERT INTO tb_userss(username,email,password)
-            VALUES('$username','$email','$password')";
+    $sql ="INSERT INTO tb_userss(username,email,password)
+       VALUES( '$username','$email','$password')";
 
     $query = mysqli_query($conn, $sql);
 
@@ -27,7 +27,7 @@ if(isset($_POST['daftar'])) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Form Registrasi</title>
 </head>
@@ -39,19 +39,19 @@ if(isset($_POST['daftar'])) {
 
 <form method="POST">
 
-    <label>Username</label><br>
+    <label>username</label><br>
     <input type="text" name="username" required>
-    <br><br>
+    <br></br>
 
     <label>Email</label><br>
     <input type="email" name="email" required>
-    <br><br>
+    <br></br>
 
-    <label>Password</label><br>
-    <input type="password" name="password" required>
-    <br><br>
+    <label>password</label></br>
+    <input type="password"name="password" required>
+    <br></br>
 
-    <button type="submit" name="daftar">Daftar</button>
+    <button type="submit" name="daftar">daftar</button>
 
 </form>
 
