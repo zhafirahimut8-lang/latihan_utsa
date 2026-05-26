@@ -3,13 +3,13 @@ include "koneksi.php";
 
 if(isset($_POST['daftar'])) {
 
-    $username = $_POST['username'];
+    $nama_lengkap = $_POST['nama_lengkap'];
     $email    = $_POST['email'];
     $password = $_POST['password'];
 
     // query simpan data
-    $sql = "INSERT INTO tb_userss(username,email,password)
-            VALUES('$username','$email','$password')";
+    $sql = "INSERT INTO tb_userss(nama_lengkap,email,password)
+            VALUES('$nama_lengkap','$email','$password')";
 
     $query = mysqli_query($conn, $sql);
 
@@ -39,8 +39,8 @@ if(isset($_POST['daftar'])) {
 
 <form method="POST">
 
-    <label>Username</label><br>
-    <input type="text" name="username" required>
+    <label>nama_lengkap</label><br>
+    <input type="text" name="nama_lengkap" required>
     <br><br>
 
     <label>Email</label><br>
