@@ -1,14 +1,13 @@
 <?php
 
 $host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "db_daftar";
+$user="root";
+$pass ="";
+$db="db_daftar";;
 
 $conn = mysqli_connect($host,$user,$pass,$db);
 
-if(!$conn){
-    die("Koneksi gagal");
+if (!$conn) {
+    die("koneksi gagal");
 }
-
 ?>
